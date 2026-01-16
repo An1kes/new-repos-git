@@ -53,3 +53,25 @@ https://github.com/Asstet3/git-readme.git (ссылка на удаленный 
  `git log --oneline`
 Команда сокращает вывод каждого коммита до одной строки.
 Хэш сокращает до минимальной длинны позволяющей его уникально идентифицировать.
+
+----
+## Статусы
+
+`untracked` - Неотслеживаемый
+`staged`   - Подготовленный (после git add)
+`tracked`  - Отслеживаемый (после git comit)
+`modified` - Изменённый после комита
+
+#Схема 
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git comit"     --> tracked/comitted;
+
+%% стрелка без текста для примера: 
+  A --> B;
+```
+
+
+
